@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+    height: 70px;
+    position: fixed;
+
+    z-index: 999;
+    background: white;
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .7);
+
+    align-items: center;
+    
+}
+
+.logo-image{
+    height: 80%;
+    width: 60px;
+    justify-self: center;
+}
+
+.logo-img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.burger-menu{
+    position: absolute;
+    width: 50px;
+    height: 30%;
+   
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-menu span{
+    width: 80%;
+    height: 2px;
+    background: #551a8b;;
+}
+
+header nav{
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.743);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+    height: 65vh;
+
+    
+    /* display: none; */
+}
+
+header nav ul li{
+    margin-top: 2.5rem;
+    
+}
+
+
+header nav ul li a{
+    text-decoration: none;
+  
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    color:#190482;
+}
+
+
+
+.hero{
+    
+    height: 95vh;
+    background-image: url("images/16836366_Blue_and_pink_watercolor_background\ \(1\).jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.hero-image{
+    width: 100%;
+    height: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-img{
+    width: 86%;
+    height: 80%;
+}
+
+.hero-text a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-left: .5rem;
+}
