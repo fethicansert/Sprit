@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <div class="burger-menu">
+        <div id="burger-button" class="burger-menu">
             <span></span>
             <span></span>
             <span></span>
@@ -20,7 +20,7 @@
             <img class="logo-img" src="images/AmericanLogo.png">
         </div>
 
-        <nav>
+        <nav id="header-nav">
             <ul>
                 <li class="selected"><a href="#">Home</a></li>
                 <li><a href="#">Psychedelic Subsances</a></li>
@@ -31,9 +31,9 @@
         </nav>
 
         <div class="social-container">
-            <i class="fa-brands fa-facebook fa-xl" ></i>
-            <i class="fa-brands fa-instagram fa-xl"></i>
-            <i class="fa-brands fa-square-x-twitter fa-xl"></i>
+            <i class="fa-brands fa-facebook" ></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
         </div>
     </header>
 
@@ -107,15 +107,80 @@
     </section>
 
     <section class="map">
-        <h1>FIND THE OTHERS ?</h1>
-
+        <h1>FIND THE OTHERS</h1>
+        <p class="map-desc">Map of psychedelic societies, organizations and practitioners for learning, healing, and connecting.</p>
         <div class="map-flex">
             <div class="map-image">
                 <img class="map-img" src="images/map1.png">
+                <!-- <div class="sacred-image"><img class="sacred-img" src="images/—Pngtree—mandala vector purple round ornament_8362045.png"></div> -->
             </div>
-    
             <div class="map-text">
-                <p>Map of psychedelic societies, organizations and practitioners for learning, healing, and connecting. Find psychedelic assistance in your area.</p>
+                <div class="mapt-text-locations">
+                    <div class="location">
+                        <div class="location-logo">
+                            <img class="location-logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAABQVJREFUWEfNl2tsFFUUx/93to8thZba2oem7W5bFYvtTBFoYsRYmhiJgKDVkCCI8dHZNCiPqBFjgA9oYgwiKLsLCX4AoyAKCUX5YFEMBKOldraiVdqdFmhNH7Ql1N2ly+4xc8s2PLqdu1s/eD/tzPmfc3733MecZfgfDRYXywGy2Ae1aoDJjHA3gaUwkJ8YugDS9Ay5Ac+yUKyxY4Ip3N1yvxQKrQFhBRhLmSCZD6B9YYtlW+fLZX+IQgnD2NzaRkbYJBo4oiOGTR218mYRPyEYu1s7CMLTIgHH1TB8pdfKNWb+pjB2l3YEwEKzQAL2el2VF02kmxDG7vJsB2i1QCJBCduhq+WvRhNHhbG5tMcZ8K1gFmEZAQs6VPnYeA5RYYpczccJrEo4i6CQgb73qsp8YZhCZ3OFxFiTYPyYZWGiWZ0O5ddbHcetjH2ntgEStphlSbYwrJmdixmZVnzZOoBvvJfNXLidQdrgVcveE4IpcnkOEWhJRGxNkPBBVT4yrBbsONOLn7qHuenNyjzUKneOxVx6qA1ar48/y9lT4KjIRkufDzubekE3ZGZgh71q+VIhGLtL8wAoi4hXzMzEqrIs2NOT4enzYcnXbdy0dX4+nrwnA38OBOAPhnG0fQh7Wvq57YvFxZiaJMFqkbDxZBdOdY1O4Ppo0VW5XBDGcx6g/Ih4zewc1FVko89/DW2DAaw8qnPTtuoCLC6Zzn9fDRG2nO7GvrOXYJEY9i8uxqycKbwib524iAOtAzfmvqir8lj8iGHcPWNza42M8GBEtH5OLublT8OMO6z4rd+PmsOjlVlQlI435uaiMD0ZJy5cwdqG8xi6Ovp9fP6BLLzz0F043TWMl47pHDYyiOFMR608W7QyewF6zhAXpCXB+ZgNl/xBPktbejI2n+pG9/AIX4LiDCtyUxPR3PMPjHztQwFUFaQhJYEhQWLwBcPITk3kG7x7ODian2iv7lBWisG4tddBeN8QH1xSwssduBbGYCCEvKmJ+PCXHqydk8NjNfX4EAwT8lITOXi//xo8vT7ML0y7KZdRoeX1Xv6Oga33quVbxWBcnkcAOmGIP6ouwBPF0yFdX9DOyyPo8QUxNy/11lhjz5809aJuVvbYc4gIR9qGsO74Bf5OovDD7Y6KU0Iwhsju0sYWeVqSBaWZVgwEQjg3GMDy0kysm5ODDGvCbUDGyVr9XSfaB6+iNCsFUxIlnO338+WKDF2Vx92rUT8HdpfnAEDPRJ0+gML0JOSlJnGJMfvWSwFcGTFr8OgzXVX4fhSujG2XtoyF8flEMPHYwkRPdTqUQzHB8KVyan+DITeepOP5GIetQ5VLosUz6WdaVgPh7f8VDCN60etQ9sQFw6vj9pwDUdTZiIOSpquKMpHetO0scjYvJMaM1nNSg0iq6nCU/TApGMPZ5mr+lIGtipuG6GPdoZi2r6aVMQDudTdmBSnRuD6nxQzE0E1JacUdL9gDZr5CMLw6Tm0ZY7EfdUa0yOtQ6s1ADLswjCEucmnbCHhNJDDXEN7VHfLbovqYYK4DHSdApFE3/Z8kfANHm02xU8sOAb8zhswJZnxhODRQ2ldXdVN7Z1ahmCvD7x5XkwxYmqNeXhLd531F+css+aQrEwlg363NQwg/3paQEip1x8yfYwWJeQPfmsDmbHmUsXCD0aIAGGEhqvbWKSfjAZk0DD/ybq2ShWk/Y5Yar1rWGC+I4fcvHkDBM9HIs6MAAAAASUVORK5CYII=">
+                        </div>
+                        <div class="location-text">
+                            <p>Psychedelic Societies</p>
+                        </div>
+                        <div class="location-num"><p>90</p></div>
+                    </div>
+
+                    <div class="location">
+                        <div class="location-logo">
+                            <img class="location-logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAA7dJREFUWEfN2FuI1VUUx/HPVhFH6amMJEJFMQwt09QHS5pESEjUUhC0UPJBwTTJQBy0CdQg8NaMj15AQwzTICERskwDGcpLSmFpol1E8UEkvKH+Y58z6oxnzvnvc6aH1tv892+t9f2vtf97rznB/8hCbSxZV4zDc3gSdbiOv3AcXxPuVBu7SphsMN7Fm60A5fJdwzasI/ySClUFTPYBGlMDt9E1Ej5M8UuEyXbijZSAZTSfE6bm+SfAZF/itbxACet7CBMr6XJgsk/wTkKiVEkTYUE5cQWY7FV8lZelVy9GjqSlhWtx2+bbBMLejmSVYPajPi/2xo2MGMHhw8ydm6curH9DeKUKmOx5HEkJvXs3kyezcyfTpqV4FDTDCUcfVpepTLYUK1NCL1rEmjXMn8+GDSkeBc1SwkepMLsxOS/0pk1cucLBg4wdS48ezJuX51VY/4IwJRXmJwytFHbIEE6c4M4djh5l+HC6dGHgQM6cyQU6QXg2FeY8nqoUMlZh7VoGxwui1U6eZPFibtzIhfmTUBK/3J75ASMeDhlb0LUrzc3tVxYuZP36B89CYMECrl5l8+YOwX4kvJBama2Y2VZcX8+qVdy9y7Jl7I8ffqudPUv//g/+njSJJUuKLYwb+9ixEqCthLdSYd7Hx23F48ezb1/xyYQJ7G09tnr25PRpBgzgehwiMGUKu3YV2xX9Dh0qgXmPsCYVZiwOtBX37cvy5cQWNDZy/jwzZ7JiBQcOMGZMsWLbtzN0KA0NXLrE6tWcO1cC8yLh+0SYKMuye+KYdMsWjhzh9m1GjWLWLGJ7Tp3i8mV692bQIIYNo6mJlSupqyPup1ipPXvapo6vVGqVroPPUDhTt21jxoz2zjt2MH16acDYytiaW7eKa927E6+MOXPuaz8ltNuP91YqwcRU26OwTx9mzy4GjnbzZrFSFy6UwvTrV2xft27Ftbhv4hd18eJ97euEeKiWWN4IEdM90ZFjjc/OEAaW882DibNMnGn+K3ubsKlGmOiW/Yayb1MF5XHCsEr6lLEzjpxx9Oys1RO+7SRMoTrxUJ/VCZpmQu74mlCZAsxj+B2P1AD0NwYQcq/PRJgC0P1PvUqgiYR2R14nNnBb12wdFlYBs4rQkKqvojL3QmZJgzpy/096GLIWmMfxMx6t8MZ/4BnCP6lViboaYAr7J/76UDqlPMj8NOHXakA6AVMAegnfdZBwNKGlWpBOwhSAXi7+FqML4j09jlA6SiWS1dimdl/YaOzAVEKcnWu2fwEf2e0k5H11+QAAAABJRU5ErkJggg==">
+                        </div>
+                        <div class="location-text">
+                            <p>Psychedelic Organizations</p>
+                        </div>
+                        <div class="location-num"><p>7</p></div>
+                    </div>
+               
+
+                    <div class="location">
+                        <div class="location-logo">
+                            <img class="location-logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAABKNJREFUWEfNmGmsnWMQx39DfBAhdoIKKkrta7/UUhU01FKtLbXWHnsRKqGCihIaygcVQi2x1NrEEhSxxFJUExJ7qCUIscSW8MjvnLnLufcs7zm+mOQm5973eWf+z8x//jPnBv8ji16wFMrywHhgW2B9YEXgd+BLYAnwbBB/d+u7KzCFsgVwNnBUAmgV7zfgLmBOEO9XBVUZTKFcCsys6njQuZlBXFblvUpgCuVB4JCWDi3SVsBi4J+mpxYEMbkToI5gCuVxYP+2jizeQ8C6wANZSAvVaAuDmNjOT1swhXIDcEa/g+2BU4CTgCcG/XwErASYv32BW4ETm4a9MYgzWwFqCaZQdGvIuk1JSn4FfA2YjVXz2TTgNkBv9wKHAdsAS5uGnRDEk82etAPzHDCu/6U9gOeHuNgV2BO4IIGeDKwCfJrXmApMB96x2fvfXRSEbw2zpmAKxYK8Nez03nnjLbMsdwILAU8/nbwR0GzgBGB14LjswU2AAeXZIYi3h/pvBWYGcGX/4eNTWczOD8CHwDrARlmWI4GLkksbZ0nvBzYAdkmQezVkZ0YQV1UF8zBwUO3wzcCpwPfANXnrPi+W4FrgHOA7QCXaDDgWuB3YENgpwSgMdlzdHgni4Kpg3gW2rjnzk+zx5l8A5+dtPwNeSh0+V/c5GCyL2iv918rzVwNrJ+A6gqVBSPEGa1Wmz4ERXAgcAEwAVkheyA+1ZBmwG7Bjpt9JZQbNkC1u+88DXgYKMLYh7rIgRlQF82YtjDd+PTNgik2s5H0vS2JAyyEIAf6U3LJ8tvgkYAFwaD4fiL44CAtYKTPzgansDryQgZ1K3s6bSr2zsmP8PCtLoq48BfyRvJFvdpns2zm77pZa/PlBHF0VjMyYzcrAL8CrwGrA5sD1KfcCM5DZE/RjwBXAN8B6gF1l69vizi7nls/vqEGYHsR1VcHIBnNSB+AS8GjeUEEzOwrat8AxwMUJUs3ZDxgFvJjnpKltvkZ2l1sPjA1CL53L5IlCkXagtixK4XIRMFN9486/nw78nFlQ7C4HfgXWzHdOy0nuFjS3HjuIpo3Tbhx4nyk1eZeYckYwDkXH5z3ZOXJA1fX3I4ZcVe7IPjmlFNTt7iDM6zBrB+bw7Ik6H6y5YF7Jmzsa1A/nkmAE5cQZA/wFvAG8Bvw5LOakIBTV6mCyVM5nt5Q6Zw7MwafquliYdj/3tbLi6ECUV5qkdwzY9nX7OIhNmwGpl6+NFYohLUqjPZOyr46oSHbMeUncwSfNzj7Aj/1/nBaEy0ZTq7LpORYbbyOpZZT7jHPppvTdt1JslyPEJavePdqSIHzS0qqAceV09Wy0kakxo5Ocl+Tsah1rXBBDN6KG0x3BeLpQFH1nca82N4iB9bXXMiUYVeMTqGlyt+aiOjIIG72tVcpMAhpo9U5eG59PDEJt7miVwSSgOTkiOzrOA7OCcFhUsq7AJKDGRb11mI7fk4a+2gsYdzY3GkdfK3MnHB2EU6qydQ0ms+N/H/wC0spGBfFBZRR5sCcwCUiJc1EYamOCcD/s2noGk4DUYqfRcjkexwfhmt6T/ScwCcg5fR8wOQgnVc/2L2lQMjNyNe9JAAAAAElFTkSuQmCC">
+                        </div>
+                        <div class="location-text">
+                            <p>Psychedelic Facilitators</p>
+                        </div>
+                        <div class="location-num"><p>3</p></div>
+                    </div>
+               
+
+                    <div class="location">
+                        <div class="location-logo">
+                            <img class="location-logo-img" src="data:image/png;base64,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">
+                        </div>
+                        <div class="location-text">
+                            <p>Psychedelic Therapist</p>
+                        </div>
+                        <div class="location-num"><p>3</p></div>
+                    </div>
+               
+
+                    <div class="location">
+                        <div class="location-logo">
+                            <img class="location-logo-img" src="data:image/png;base64,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">
+                        </div>
+                        <div class="location-text">
+                            <p>Shamans</p>
+                        </div>
+                        <div class="location-num"><p>4</p></div>
+                    </div>
+               
+
+                    <div class="location">
+                        <div class="location-logo">
+                            <img class="location-logo-img" src="data:image/png;base64,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">
+                        </div>
+                        <div class="location-text">
+                            <p>Integration Group</p>
+                        </div>
+                        <div class="location-num"><p>11</p></div>
+                    </div>   
+                </div>
+                <button class="map-text-button">FIND</button>
             </div>
         </div>
 
@@ -123,6 +188,49 @@
 
        
     </section>
+
+    <div class="events">
+        <h1 class="events-header">Psychedelic Events</h1>
+        <ul class="events-list">
+            <li class="event">
+                <div class="event-image"><img class="event-img" src="https://secure.meetupstatic.com/photos/event/6/c/e/9/600_515667881.webp?w=384"></div>
+                <div class="event-text">
+                    <p>Event Header</p>
+                    <p>Event Time</p>
+                    <p>Event location</p>
+                    <p>View Event Details</p>
+                </div>
+            </li>
+            <li class="event">
+                <div class="event-image"><img class="event-img" src="https://secure.meetupstatic.com/photos/event/1/a/7/c/clean_501906780.webp"></div>
+                <div class="event-text">
+                    <p>Event Header</p>
+                    <p>Event Time</p>
+                    <p>Event location</p>
+                    <p>View Event Details</p>
+                </div>
+            </li>
+            <li class="event">
+                <div class="event-image"><img class="event-img" src="https://secure.meetupstatic.com/photos/event/6/0/0/3/600_515844579.webp?w=384"></div>
+                <div class="event-text">
+                    <p>Event Header</p>
+                    <p>Event Time</p>
+                    <p>Event location</p>
+                    <p>View Event Details</p>
+                </div>
+            </li>
+            <li class="event">
+                <div class="event-image"><img class="event-img" src="https://www.rollingstone.com/wp-content/uploads/2020/09/psylocibin-920-magic-mushrooms-psychedelic-column2.jpg?w=1581&h=1054&crop=1"></div>
+                <div class="event-text">
+                    <p>Event Header</p>
+                    <p>Event Time</p>
+                    <p>Event location</p>
+                    <p>View Event Details</p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
 
     <script src="index.js"></script>
     
