@@ -11,7 +11,6 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    padding-bottom: 1000px;
 }
 
 
@@ -115,6 +114,7 @@ header nav ul li a:hover{
 .hero{
     height: 100vh;
     background-image: url("images/16836366_Blue_and_pink_watercolor_background\ \(1\).jpg");
+    /* background-image: url(images/pink-blue-watercolor-texture.jpg); */
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -178,16 +178,14 @@ header nav ul li a:hover{
 .services-title{
     text-align: center;
     color: #602D99;
-    margin: 1rem;
     text-transform: uppercase;
     font-size: 1.8rem;
     line-height: 40px;
     display: block;
-    margin: 1.5rem auto 1rem auto;
+    margin: 2.5rem auto .8rem auto;
     background: rgba(255, 255, 255, 0.815);
     border-radius: 10px;
     font-family: 'Roboto Slab', serif;
-    
 }
 
 .services{
@@ -269,6 +267,7 @@ header nav ul li a:hover{
 .service-text p{
     color: #150758;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .service-button{
@@ -464,10 +463,12 @@ header nav ul li a:hover{
     max-width: 350px;
     box-shadow: 1px 1px 3px #551a8b;
     display: flex;
-    border-radius: 4px;
-   
+    border-radius: 4px;  
 }
 
+.event-desc{
+    display: none;
+}
 .event-image{
     width: 50%;
     /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
@@ -491,6 +492,7 @@ header nav ul li a:hover{
     padding: .4rem 0 .4rem .3rem;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
     font-size: .8rem;
     font-weight: 600;
     color: #150758b1;
@@ -509,39 +511,308 @@ header nav ul li a:hover{
     align-items: center;
     justify-content:  flex-start;
     width: 13%;
-    
-    
 }
 
 .event-time-text,
 .event-type-text{
-    width: 80%;
+    width: 87%;
     display: flex;
     align-items: center;
     padding-left: .2rem;
 }
 
 .time-logo{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .camera-logo{
     font-size: .9rem;
+    margin-left: .1rem;
 }
 
 .location-logo{
-    font-size: 1.1rem;
-    margin-left: .25rem;
+    font-size: 1rem;
+    margin-left: .2rem;
 }
-.ordered{
-    order: 2;
+
+.arrow-logo{
+    font-size: 1rem;
+    position: absolute;
+    left: 80%;
 }
+
+.view-event-button{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.view-arrow{
+    position: absolute;
+    left: 104%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: .1rem;
+}
+
+.view-event-button:hover .view-arrow{
+    color: #D53DE3;
+}
+
+.view-event-button:hover{
+    color: #C54AC1;
+}
+
+.events-button{
+    display: block;
+    margin: .7rem auto 0 auto;
+    padding: .45rem 2rem;
+    border: none;
+    border-radius: 20px;
+    font-size: .80rem;
+    font-family: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    color: white;
+    background: #5DB0E6;
+}
+
+.footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 200px 100px;
+    /* background-image: url(images/pink-blue-watercolor-texture.jpg); */
+    background-image: url("images/16836366_Blue_and_pink_watercolor_background\ \(1\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 3.5rem;
+}
+
+.about-footer,
+.header-footer,
+.social-footer{
+    font-size: .9rem;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.382);
+}
+
+.mail-box,
+.location-box,
+.phone-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.about-footer i{
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background: white;
+    color:#7551aa ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .2rem;
+}
+
+.header-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.382);
+}
+
+.social-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social-footer i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#7551aa ;
+    font-size: 1.7rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    margin-left: .5rem;
+}
+
+.social-box{
+    display: flex;
+    width: fit-content;
+    margin-right: .5rem;
+}
+
+
+
 
 @media (min-width: 1024px){
 
 
+    .events-button{
+        display: block;
+        margin: 2rem auto 0 auto;
+        padding: .8rem 2.1rem;
+        font-size: 1.1rem;
+    }
+
+    .social-footer{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-box{
+        margin-top: 1.5rem;
+    }
+    .about-footer,
+    .header-footer,
+    .social-footer{
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    .footer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(450px,1fr) 1fr 1fr;
+        grid-template-rows: 300px;
+        background-image: url(images/pink-blue-watercolor-texture.jpg);
+        background-position: bottom;
+        margin-top: 6rem;
+    }
+
+    .about-footer,
+    .header-footer{
+        border-right: 1px solid rgba(255, 255, 255, 0.382);
+    }
+
+    .event-time-logo,
+    .event-type-logo{
+        display: flex;
+        align-items: center;
+        justify-content:  flex-start;
+        width: 5%;
+    }
+
+    .event-time-text,
+    .event-type-text{
+        width: 87%;
+        display: flex;
+        align-items: center;
+        padding-left: .2rem;
+    }
+
+    .event-text{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 40px 40px 1fr 40px;
+        width: 50%;
+        padding: .8rem 0 .8rem .5rem;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #150758b1;
+    }
+
+    .event{
+        margin: .6rem .5rem ;
+        height: 23vw;
+        width: 75vw;
+        max-width: 1000px;
+        max-height: 301px;
+        box-shadow: none;
+        display: flex;
+        border-radius: 4px;
+        position: relative;
+    }
+
+    .event::after{
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 105%;
+        background: #541a8bca;
+        bottom: -4%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .event:last-child::after{
+        display: none;
+    }
+
+    .event-img{
+        width: 96%;
+        height: 90%;
+        box-shadow: none;
+        border-radius: 4px;
+    }
+
+    .view-arrow{
+        top: 48%;
+    }
+    .event-desc{
+        display: block;
+    }
+
+    .events-header{
+        text-align: center;
+        font-size: 3.5rem;
+        color: #6532a0;
+        text-transform: uppercase;
+        font-family: 'Roboto Slab', serif;
+        width:min-content;
+        margin: 8rem auto 1.5rem auto;
+    }
+
+    .event-name{
+        font-weight: 700;
+    }
+
+    .time-logo{
+        font-size: 1.1rem;
+    }
+    
+    .camera-logo{
+        font-size: 1rem;
+        margin-left: .1rem;
+    }
+    
+    .location-logo{
+        font-size: 1.1rem;
+    }
+
     .map-text-button{
-        padding: .45rem 2.5rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding: .7rem 2rem;
     }
 
     .location-text p,
@@ -562,7 +833,7 @@ header nav ul li a:hover{
 
     .map-desc{
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         margin:  0 auto 1rem auto;
         max-width: none;
     }
@@ -585,8 +856,8 @@ header nav ul li a:hover{
 
     .map h1{
         text-align: center;
-        margin: 1rem auto .5rem auto;
-        font-size: 3rem;
+        margin:10rem auto .5rem auto;
+        font-size: 3.5rem;
     }
     
     .map{
@@ -647,7 +918,7 @@ header nav ul li a:hover{
         line-height: 70px;
         font-size: 3.5rem;
         width:max-content;
-        margin: 4rem auto 1rem auto;
+        margin: 7rem auto 1.3rem auto;
     }
 
     .services-grid{
